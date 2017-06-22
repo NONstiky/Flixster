@@ -49,6 +49,7 @@ public class MovieListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_list);
+        // resolve the recycler view and connect a layout manager and the adapter
         ButterKnife.bind(this);
         // initialize the client
         client = new AsyncHttpClient();
@@ -56,11 +57,9 @@ public class MovieListActivity extends AppCompatActivity {
         movies = new ArrayList<>();
         // initialize the adapter --movies array cannot be reinitialized after this point
         adapter = new MovieAdapter(movies);
-
-        // resolve the recycler view and connect a layout manager and the adapter
-        rvMovies = (RecyclerView) findViewById(R.id.rvMovies);
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
         rvMovies.setAdapter(adapter);
+        ButterKnife.bind(this);
         // get the configuration on app creation
         getConfiguration();
 
@@ -103,6 +102,7 @@ public class MovieListActivity extends AppCompatActivity {
             }
         });
     }
+
 
     // get the configuration for the API
     private void getConfiguration(){
