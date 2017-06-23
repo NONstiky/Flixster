@@ -9,15 +9,18 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import static com.codepath.flixster.MovieDetailsActivity.MOVIE_ID;
+
 public class MovieTrailerActivity extends YouTubeBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        final String videoId = getIntent().getStringExtra(MOVIE_ID);
+
         setContentView(R.layout.activity_movie_trailer);
 
-        // temporary test video id -- TODO replace with movie trailer video id
-        final String videoId = "tKodtNFpzBA";
 
         // resolve the player view from the layout
         YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.youtubeplayer);
