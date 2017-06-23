@@ -149,7 +149,4 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         }
     }
 
-
-
-
 }

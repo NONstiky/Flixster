@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.codepath.flixster.models.Movie;
 import com.loopj.android.http.AsyncHttpClient;
@@ -60,6 +61,9 @@ public class MovieListActivity extends AppCompatActivity {
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
         rvMovies.setAdapter(adapter);
         ButterKnife.bind(this);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        toolbar.setLogo(R.drawable.download);
+//        setSupportActionBar(toolbar);
         // get the configuration on app creation
         getConfiguration();
 

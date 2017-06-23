@@ -21,6 +21,7 @@
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_alignParentTop="true"
+        android:textColor="@color/colorWhite"
         android:layout_toRightOf="@+id/ivPosterImage"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -29,6 +30,10 @@
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:maxLines="3"
         android:layout_below="@+id/tvTitle"
         android:layout_toRightOf="@+id/ivPosterImage"
         android:text="Movie overview and synopsis"

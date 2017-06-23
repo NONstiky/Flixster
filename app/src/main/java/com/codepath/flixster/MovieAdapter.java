@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.media.Image;
+import android.support.annotation.Nullable;
 import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.view.menu.ActionMenuItemView;
 import android.support.v7.view.menu.MenuView;
@@ -114,16 +115,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         // track view objects
-        ImageView ivPosterImage;
-        ImageView ivBackdropView;
+        @Nullable @BindView(R.id.ivPosterImage) ImageView ivPosterImage;
+        @Nullable @BindView(R.id.ivBackdropImage) ImageView ivBackdropView;
         @BindView(R.id.tvTitle) TextView tvTitle;
         @BindView(R.id.tvOverview) TextView tvOverview;
 
         public ViewHolder(View itemView){
             super(itemView);
             // lookup view objects by id
-            ivPosterImage = (ImageView) itemView.findViewById(R.id.ivPosterImage);
-            ivBackdropView = (ImageView) itemView.findViewById(R.id.ivBackdropImage);
             ButterKnife.bind(this, itemView);
             // add this as the itemView's onClickListener
             itemView.setOnClickListener(this);
