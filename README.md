@@ -26,16 +26,25 @@ The following **additional** features are implemented:
 
 * [x] List anything else that you can get done to improve the app functionality!
 Made it so that the Youtube video would seemlesly continue playing when switching between landscape and portrait.
+Added Released dates
 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-![Portrait Experience](PortraitExperience.gif)
-![Land-Scape](LandscapeExperience.gif)
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+Portrait Experience
+
+
+![Portrait Experience](PortraitExperience2.gif)
+
+Landscape Experience
+
+
+![Land-Scape](LandscapeExperience2.gif)
+
+GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
